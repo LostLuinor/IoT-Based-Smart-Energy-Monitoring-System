@@ -41,8 +41,8 @@ The system consists of three main layers:
 1. Connect the PZEM-004T sensor to the ESP8266 using the UART interface (TX/RX pins).
 2. Attach the closed-loop CT to the live wire of the AC circuit (e.g., bulb socket).
 3. Power the ESP8266 with a 5V DC supply and ensure the bulb is connected to an AC supply.
-4. Verify all connections as per the wiring diagram (see `diagrams/circuit.png`).
-![CircuitDiagram](diagrams/Circuit.png)
+4. Verify all connections as per the wiring diagram (see `diagrams/circuit.jpg`).
+![CircuitDiagram](diagrams/Circuit.jpg)
 
 ### 2. Firmware Setup
 1. Install the **Arduino IDE** and add support for the ESP8266 board via the Boards Manager.
