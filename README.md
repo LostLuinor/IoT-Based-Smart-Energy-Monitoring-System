@@ -19,7 +19,7 @@ The system consists of three main layers:
 2. **Data Transmission**: The ESP8266 broadcasts data over a WebSocket server on port 81 to connected clients.
 3. **User Interaction**: A Flutter-based mobile app displays real-time data, and a Python script logs data to a CSV file.
 
-![System Architecture](docs/system_architecture.png) *(Add your architecture diagram here)*
+![System Architecture](diagrams/SystemArchiOverview_FlowChart.png) *(Add your architecture diagram here)*
 
 ## Hardware Requirements
 - **ESP8266 Wi-Fi Module**: Acts as the core microcontroller for data processing and Wi-Fi communication.
