@@ -19,12 +19,14 @@ The system consists of three main layers:
 2. **Data Transmission**: The ESP8266 broadcasts data over a WebSocket server on port 81 to connected clients.
 3. **User Interaction**: A Flutter-based mobile app displays real-time data, and a Python script logs data to a CSV file.
 
-![System Architecture](diagrams/SystemArchiOverview_FlowChart.png) *(Add your architecture diagram here)*
+![System Architecture](diagrams/SystemArchiOverview_FlowChart.png)
 
 ## Hardware Requirements
 - **ESP8266 Wi-Fi Module**: Acts as the core microcontroller for data processing and Wi-Fi communication.
+  ![System Architecture](diagrams/SystemArchiOverview_FlowChart.png)
 - **PZEM-004T Energy Sensor**: Measures electrical parameters (voltage, current, power, energy, frequency, power factor).
 - **Closed-Loop Current Transformer (CT)**: Non-intrusive current measurement for the PZEM-004T.
+![System Architecture](diagrams/PZEMCT.jpg)
 - **Household Bulb and Socket**: Used as the test load for demonstration.
 - **Power Supply**: 5V DC for the ESP8266 and appropriate AC supply for the load.
 
@@ -42,7 +44,8 @@ The system consists of three main layers:
 1. Connect the PZEM-004T sensor to the ESP8266 using the UART interface (TX/RX pins).
 2. Attach the closed-loop CT to the live wire of the AC circuit (e.g., bulb socket).
 3. Power the ESP8266 with a 5V DC supply and ensure the bulb is connected to an AC supply.
-4. Verify all connections as per the wiring diagram (see `docs/wiring_diagram.png`).
+4. Verify all connections as per the wiring diagram (see `diagrams/circuit.png`).
+![System Architecture](diagrams/circuit.png)
 
 ### 2. Firmware Setup
 1. Install the **Arduino IDE** and add support for the ESP8266 board via the Boards Manager.
