@@ -1,13 +1,13 @@
 # IoT-Based Smart Energy Monitoring System
 
 ## Overview
-This project implements an **IoT-based Smart Energy Monitoring System** designed to monitor electrical parameters such as voltage, current, power, energy consumption, frequency, and power factor in real-time. The system leverages the **ESP8266 Wi-Fi module** and the **PZEM-004T energy sensor** to collect data from a connected load (e.g., a household bulb). The data is transmitted via **WebSocket** to a **Flutter-based mobile application** for real-time visualization and a **Python script** for data logging into a CSV file for historical analysis. This solution is cost-effective, scalable, and suitable for smart home or small-scale industrial energy monitoring.
+This project implements an **IoT-based Smart Energy Monitoring System** designed to monitor electrical parameters such as voltage, current, power, energy consumption, frequency, and power factor in real-time. The system leverages the **ESP8266 Wi-Fi module** and the **PZEM-004T energy sensor** to collect data from a connected load (e.g., a household bulb). The data is transmitted via **WebSocket** to a **Flutter-based mobile/web application** for real-time visualization and a **Python script** for data logging into a CSV file for historical analysis. This solution is cost-effective, scalable, and suitable for smart home or small-scale industrial energy monitoring.
 
-This repository contains the source code for the ESP8266 firmware, the Flutter mobile application, and the Python logging script, along with documentation and setup instructions.
+This repository contains the source code for the ESP8266 firmware, the Flutter application, and the Python logging script, along with documentation and setup instructions.
 
 ## Features
 - **Real-Time Monitoring**: Measures and displays electrical parameters (voltage, current, power, energy, frequency, power factor) every 2 seconds.
-- **Mobile Application**: A user-friendly Flutter-based Android app for live data visualization using circular progress indicators.
+- **Mobile/Web Application**: A user-friendly Flutter-based Android app for live data visualization using circular progress indicators.
 - **Data Logging**: A Python script logs data into a CSV file with timestamps for historical analysis.
 - **WebSocket Communication**: Ensures low-latency, bidirectional data transmission between the ESP8266 and clients.
 - **Affordable Hardware**: Built using low-cost components like ESP8266 and PZEM-004T.
@@ -17,7 +17,7 @@ This repository contains the source code for the ESP8266 firmware, the Flutter m
 The system consists of three main layers:
 1. **Data Acquisition**: The ESP8266 interfaces with the PZEM-004T sensor to collect electrical parameters via a UART serial interface.
 2. **Data Transmission**: The ESP8266 broadcasts data over a WebSocket server on port 81 to connected clients.
-3. **User Interaction**: A Flutter-based mobile app displays real-time data, and a Python script logs data to a CSV file.
+3. **User Interaction**: A Flutter-based mobile/web app displays real-time data, and a Python script logs data to a CSV file.
 ![System Architecture](diagrams/SystemArchiOverview_FlowChart.png)
 
 ## Hardware Requirements
@@ -29,7 +29,7 @@ The system consists of three main layers:
 
 ## Software Requirements
 - **Arduino IDE**: For programming the ESP8266.
-- **Flutter and Dart**: For developing the Android mobile application.
+- **Flutter and Dart**: For developing the Android mobile/web application.
 - **Python**: For running the data logging script.
 - **Libraries**:
   - Arduino: `SoftwareSerial`, `ESP8266WiFi`, `WebSocketsServer`
@@ -51,12 +51,13 @@ The system consists of three main layers:
 4. Update the Wi-Fi credentials (`SSID` and `PASSWORD`) in the firmware code.
 5. Upload the code to the ESP8266.
 
-### 3. Mobile Application Setup
+### 3. Application Setup
 1. Install **Flutter** and set up the development environment (Android Studio or VS Code).
-2. Clone this repository and navigate to the `mobile_app` directory.
+2. Clone this repository and navigate to the `app` directory.
 3. Run `flutter pub get` to install dependencies.
-4. Update the WebSocket server IP address in `lib/main.dart` to match the ESP8266's IP.
+4. Update the WebSocket server IP address in `main.dart` to match the ESP8266's IP.
 5. Build and run the app on an Android device using `flutter run`.
+![GUI](diagrams/GUI.png)
 
 ### 4. Data Logging Setup
 1. Install **Python 3.x** and required libraries: `pip install websocket-client`.
@@ -75,7 +76,7 @@ The system was tested using a household bulb as the load. Key observations:
 - Voltage: ~230V (stable for AC supply).
 - Frequency: ~50Hz (standard for most regions).
 - Power factor: ~1 for resistive loads (e.g., incandescent bulbs), lower for LEDs.
-- Real-time updates: Refreshed every 2-3 seconds in the mobile app.
+- Real-time updates: Refreshed every 2-3 seconds in the mobile/web app.
 - Data logging: Consistent CSV entries with timestamps.
 
 Limitations:
@@ -87,9 +88,10 @@ Limitations:
 ├── docs/                    # Documentation and diagrams
 ├── firmware/                # ESP8266 Arduino code
 │   └── energy_monitor.ino
-├── mobile_app/              # Flutter mobile application
+├── app/              # Flutter application
 │   ├── lib/
 │   └── pubspec.yaml
+│   └── main.dart
 ├── python_logger/           # Python data logging script
 │   └── logger.py
 └── README.md
@@ -104,9 +106,6 @@ Limitations:
 ## References
 1. M. P. Muralidharan, L. Nislaiai, and U. Aishwarya, "IoT Based Smart Energy Meter for Power Monitoring System Using ESP8266," *International Research and Technology (REET)*, vol. 9, no. 10, Oct. 2023.
 2. H. Malviya, V. Shukla, and S. S. Raghuwanshi, "IoT-Enabled Real-Time Smart Energy Meter," *International Journal for Research Trends and Innovation (IJRTI)*, vol. 8, no. 5, 2023.
-
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ## Contributors
 - Manoj Srivatsav
