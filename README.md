@@ -88,7 +88,7 @@ Limitations:
 ├── docs/                    # Documentation and diagrams
 ├── firmware/                # ESP8266 Arduino code
 │   └── energy_monitor.ino
-├── app/              # Flutter application
+├── app/                     # Flutter application
 │   ├── lib/
 │   └── pubspec.yaml
 │   └── main.dart
@@ -111,4 +111,3 @@ Limitations:
 - Manoj Srivatsav
 - Saran J Palani
 - Lishanthan Sri Ayyanar
-- Sirisha Tadepalli
