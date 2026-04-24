@@ -107,7 +107,4 @@ Limitations:
 1. M. P. Muralidharan, L. Nislaiai, and U. Aishwarya, "IoT Based Smart Energy Meter for Power Monitoring System Using ESP8266," *International Research and Technology (REET)*, vol. 9, no. 10, Oct. 2023.
 2. H. Malviya, V. Shukla, and S. S. Raghuwanshi, "IoT-Enabled Real-Time Smart Energy Meter," *International Journal for Research Trends and Innovation (IJRTI)*, vol. 8, no. 5, 2023.
 
-## Contributors
-- Manoj Srivatsav
-- Saran J Palani
-- Lishanthan Sri Ayyanar
+
